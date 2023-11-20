@@ -1,6 +1,6 @@
 ![Basic Concept](https://i.imgur.com/CcAAQRR.png)
 
-**Note:** This summary provides a high-level overview of the technologies used and the main functionalities of each script. The actual implementation might vary based on specific requirements, pin configurations, and additional features.
+**Note:** This summary provides a high-level overview of the technologies used and the main functionalities of each script. The actual implementation might vary based on specific requirements, pin configurations, and additional features. Also this project is **currently under development** and there is to be expected to be bugs.
 
 # sensory_node Script Summary
 
