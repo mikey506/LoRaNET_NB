@@ -1,9 +1,11 @@
 # AgriTech Drone Project Overview:
 The agricultural maintenance drone is designed to automate various tasks in agriculture, such as irrigation, crop monitoring, precision agriculture, smart fertilizer dispensing, weed detection, and remote field surveillance. The drone is equipped with a variety of sensors, including soil moisture, weather, GPS, DHT11 for temperature and humidity, capacitive soil moisture, ultrasonic sensors, and a camera. It also features a 4-channel relay for controlling the drone's flight and implementing a collision avoidance algorithm.
 
-## Components and Pinout:
-ESP32S3 Development Board
-SX1262 LoRa RF Module
+## Components:
+- **ESP32S3 Development Board**
+- **SX1262 LoRa RF Module**
+
+## Pinout for Modules:
 
 | Module/Sensor/Relay | Purpose/Pinout |
 | --- | --- |
@@ -29,27 +31,27 @@ SX1262 LoRa RF Module
 
 ## Functionality:
 
-### Automated Irrigation System:
+### Automated Irrigation System: (To be added)
 Soil moisture sensor triggers irrigation when moisture levels are low.
 Weather station data influences irrigation decisions.
 
-### Crop Monitoring:
+### Crop Monitoring: (To be added)
 ESP32S3 on the drone captures images of the crops.
 Images are processed for crop health analysis.
 
-### Precision Agriculture:
+### Precision Agriculture: (To be added)
 GPS module enables accurate field mapping.
 Soil nutrient sensors guide precise fertilization.
 
-### Smart Fertilizer Dispenser:
+### Smart Fertilizer Dispenser: (To be added)
 Soil nutrient sensors determine fertilizer needs.
 Automated dispenser dispenses precise amounts of fertilizer.
 
-### Weed Detection:
+### Weed Detection: (To be added)
 Camera with image recognition identifies weeds.
 ESP32S3 controls the weeding mechanism for weed removal.
 
-### Remote Field Surveillance:
+### Remote Field Surveillance: (To be added)
 Camera system with motion sensors monitors field security.
 LoRa alerts sent for unauthorized access.
 
