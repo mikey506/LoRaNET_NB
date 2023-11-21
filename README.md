@@ -14,7 +14,7 @@
 
 ![image](https://github.com/mikey506/LoRaNET_NB/assets/13043850/9e5583f3-2247-4f1d-9dde-84d4bcb91720)
 
-## Potential Modules/Sensory Componants
+## Potential Sensory Based Modules 
 
 | Sensor                               | Sensor                              | Sensor                              |
 | ------------------------------------ | ----------------------------------- | ----------------------------------- |
