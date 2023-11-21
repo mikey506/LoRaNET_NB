@@ -5,41 +5,27 @@ The agricultural maintenance drone is designed to automate various tasks in agri
 ESP32S3 Development Board
 SX1262 LoRa RF Module
 
-### DHT11 Temperature and Humidity Sensor:
-Pin: 23 (Adjust as needed)
-Connected to the ESP32S3 for temperature and humidity readings.
+| Module/Sensor/Relay | Purpose/Pinout |
+| --- | --- |
+| **DHT11 Temperature and Humidity Sensor:** | For temperature and humidity readings. |
+| ... | **Pin:** 23 |
+| **Capacitive Soil Moisture Sensor (V1.2):** | For soil moisture readings. |
+| ... | **Pin:** 35 (Adjust as needed for ADC input) |
+| **Ublox Neo-6M GPS Module:** | Connected for GPS data. |
+| ... | **UART:** TX - 17, RX - 16 (Adjust as needed) |
+| **6x US-100 Ultrasonic Sensors:** | For distance measurements. |
+| **Front:** | Trigger - 25, Echo - 26 |
+| **Back:**  | Trigger - 27, Echo - 32 |
+| **Left:** | Trigger - 12, Echo - 14 |
+| **Right:** | Trigger - 13, Echo - 15  |
+| **Above:** | Trigger - 16, Echo - 17 |
+| **Below:** | Trigger - 18, Echo - 19 |
+| **Relay Module (4 Channels):** | For drone flight control. |
+| **Channel 1:** | **Pin:** 4 |
+| **Channel 2:** | **Pin:** 5 |
+| **Channel 3:** | **Pin:** 6 |
+| **Channel 4:** | **Pin:** 7 |
 
-### Capacitive Soil Moisture Sensor (V1.2):
-Pin: 35 (Adjust as needed for ADC input)
-Connected to the ESP32S3 for soil moisture readings.
-
-### Ublox Neo-6M GPS Module:
-UART: TX - 17, RX - 16 (Adjust as needed)
-Connected to the ESP32S3 for GPS data.
-
-### 6x US-100 Ultrasonic Sensors:
-Front: Trigger - 25, Echo - 26
-Back: Trigger - 27, Echo - 32
-Left: Trigger - 12, Echo - 14
-Right: Trigger - 13, Echo - 15
-Above: Trigger - 16, Echo - 17
-Below: Trigger - 18, Echo - 19
-Connected to the ESP32S3 for distance measurements.
-
-### Relay Module (4 Channels):
-Channel 1: 4
-Channel 2: 5
-Channel 3: 6
-Channel 4: 7
-Connected to the ESP32S3 for drone flight control.
-
-### Camera Module:
-Pin: 22 (Adjust as needed)
-No specific pinout provided.
-
-### Motion Sensor:
-Pin: 21 (Adjust as needed)
-Connected to the ESP32S3 for motion detection.
 
 ## Functionality:
 
