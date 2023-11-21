@@ -1,6 +1,5 @@
 from flask import Flask, request, jsonify, render_template
 import socket
-import network
 import machine
 import ujson
 import os
@@ -13,16 +12,8 @@ lora = Lora(mode=LoRa.LORA, frequency=868E6, sf=7)
 lora_socket = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
 lora_socket.setblocking(False)
 
-# WiFi AP settings
-ssid = "YOUR_WIFI_SSID"
-password = "YOUR_WIFI_PASSWORD"
-ap = network.WLAN(network.AP_IF)
-ap.active(True)
-ap.config(essid=ssid, password=password)
-
-# Drone IP address and port
-drone_ip = "DRONE_IP_ADDRESS"
-drone_port = DRONE_PORT_NUMBER
+# Set your server's LoRa port
+SERVER_LORA_PORT = 1
 
 # Sample commands to be sent to the drone
 commands = {
@@ -50,7 +41,7 @@ def send_command():
 
 def send_command_to_drone(command, drone_id):
     # Implement logic to send the command to the specific drone using LoRa
-    lora_socket.send(ujson.dumps({"command": command, "drone_id": drone_id}))
+    lora_socket.send(ujson.dumps({"command": command, "drone_id": drone_id}), port=SERVER_LORA_PORT)
 
 @app.route('/')
 def index():
@@ -99,3 +90,4 @@ def save_drone_state_data(drone_id, drone_state):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)  # Run the server on the local network
+
