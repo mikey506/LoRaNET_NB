@@ -5,6 +5,12 @@ The agricultural maintenance drone is designed to automate various tasks in agri
 - **ESP32S3 Development Board**
 - **SX1262 LoRa RF Module**
 
+## Modules/Sensors/Relays
+- **DHT11 Temperature and Humidity Sensor**
+- **Capacitive Soil Moisture Sensor (V1.2)**
+- **US-100 Ultrasonic Sensors**
+- **4 Channel Relay Board**
+
 ## Pinout for Modules:
 
 | Module/Sensor/Relay | Purpose/Pinout |
