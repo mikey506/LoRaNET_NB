@@ -3,6 +3,8 @@ import socket
 import network
 import machine
 import ujson
+import os
+import time
 
 app = Flask(__name__)
 
@@ -18,31 +20,9 @@ ap = network.WLAN(network.AP_IF)
 ap.active(True)
 ap.config(essid=ssid, password=password)
 
-# Sample drone state
-drone_state = {
-    "status": "Idle",
-    "battery": 90,
-    "location": {"latitude": 0.0, "longitude": 0.0},
-    "temperature": 25.0,
-    "humidity": 50.0,
-    "soil_moisture": 40,
-    "ultrasonic_data": {
-        "front_distance": 0,
-        "back_distance": 0,
-        "left_distance": 0,
-        "right_distance": 0,
-        "above_distance": 0,
-        "below_distance": 0,
-    },
-    "relay_states": {
-        "channel_1": False,
-        "channel_2": False,
-        "channel_3": False,
-        "channel_4": False,
-    },
-    "gps_data": {"latitude": 0.0, "longitude": 0.0},
-    # Add more drone state parameters as needed
-}
+# Drone IP address and port
+drone_ip = "DRONE_IP_ADDRESS"
+drone_port = DRONE_PORT_NUMBER
 
 # Sample commands to be sent to the drone
 commands = {
@@ -55,21 +35,22 @@ commands = {
 
 @app.route('/get_drone_state', methods=['GET'])
 def get_drone_state():
-    return jsonify(drone_state)
+    return jsonify(get_drone_state_data())
 
 @app.route('/send_command', methods=['POST'])
 def send_command():
     content = request.get_json()
     command = content.get('command')
+    drone_id = content.get('drone_id')
 
-    # Send the command to the drone using LoRa
-    send_command_to_drone(command)
+    # Send the command to the specific drone using LoRa
+    send_command_to_drone(command, drone_id)
 
     return jsonify({"status": "Command sent successfully", "command": command})
 
-def send_command_to_drone(command):
-    # Implement logic to send the command to the drone using LoRa
-    lora_socket.send(ujson.dumps({"command": command}))
+def send_command_to_drone(command, drone_id):
+    # Implement logic to send the command to the specific drone using LoRa
+    lora_socket.send(ujson.dumps({"command": command, "drone_id": drone_id}))
 
 @app.route('/')
 def index():
@@ -80,6 +61,8 @@ def receive_sensor_data():
     content = request.get_json()
 
     # Update drone state with received sensor data
+    drone_id = content.get('drone_id')
+    drone_state = get_drone_state_data(drone_id)
     drone_state['temperature'] = content.get('temperature')
     drone_state['humidity'] = content.get('humidity')
     drone_state['soil_moisture'] = content.get('soil_moisture')
@@ -87,8 +70,32 @@ def receive_sensor_data():
     drone_state['relay_states'] = content.get('relay_states')
     drone_state['gps_data'] = content.get('gps_data')
 
+    save_drone_state_data(drone_id, drone_state)
+
     return jsonify({"status": "Sensor data received successfully"})
+
+def get_drone_state_data(drone_id=None):
+    # Read the current state of a specific drone or all drones
+    drone_states = {}
+    if drone_id:
+        filename = f'drone_{drone_id}_state.json'
+        if os.path.exists(filename):
+            with open(filename, 'r') as file:
+                drone_states[drone_id] = ujson.load(file)
+    else:
+        for file in os.listdir():
+            if file.endswith('_state.json'):
+                with open(file, 'r') as f:
+                    drone_id = file.split('_')[1]
+                    drone_states[drone_id] = ujson.load(f)
+
+    return drone_states
+
+def save_drone_state_data(drone_id, drone_state):
+    # Save the current state of a specific drone
+    filename = f'drone_{drone_id}_state.json'
+    with open(filename, 'w') as file:
+        ujson.dump(drone_state, file)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)  # Run the server on the local network
-
