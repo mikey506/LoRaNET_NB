@@ -6,6 +6,7 @@
 #include <DallasTemperature.h>
 #include <Wire.h>
 #include <MPU6050.h>
+#include <TinyGPS++.h>
 
 #define LORA_CS 18
 #define LORA_RST 14
@@ -24,8 +25,15 @@ DallasTemperature sensors(&oneWire);
 // Accelerometer Gyroscope Sensor (MPU6050)
 MPU6050 mpu;
 
+// GPS Module (NEO-6M)
+#define GPS_SERIAL_RX 16
+#define GPS_SERIAL_TX 17
+HardwareSerial gpsSerial(1);
+TinyGPSPlus gps;
+
 void setup() {
   Serial.begin(115200);
+  gpsSerial.begin(9600, SERIAL_8N1, GPS_SERIAL_RX, GPS_SERIAL_TX);
   setupLoRa();
   setupSensors();
   // Additional setup for mesh networking
@@ -38,6 +46,10 @@ void loop() {
   float accelX, accelY, accelZ, gyroX, gyroY, gyroZ;
   readAccelerometerGyroscope(accelX, accelY, accelZ, gyroX, gyroY, gyroZ);
 
+  // Read GPS data
+  float latitude, longitude;
+  readGPSLocation(latitude, longitude);
+
   // Create a message payload
   String payload = "ID:" + String(NODE_ID) + ",Pressure:" + String(pressure) +
                    ",Temperature:" + String(temperature) +
@@ -46,7 +58,8 @@ void loop() {
                    ",AccelZ:" + String(accelZ) +
                    ",GyroX:" + String(gyroX) +
                    ",GyroY:" + String(gyroY) +
-                   ",GyroZ:" + String(gyroZ);
+                   ",GyroZ:" + String(gyroZ) +
+                   ",Latitude:" + String(latitude, 6) + ",Longitude:" + String(longitude, 6);
   // Additional payload data
 
   // Send data via LoRa
@@ -100,6 +113,15 @@ float readTemperatureSensor() {
 void readAccelerometerGyroscope(float &accelX, float &accelY, float &accelZ, float &gyroX, float &gyroY, float &gyroZ) {
   mpu.getAcceleration(&accelX, &accelY, &accelZ);
   mpu.getRotation(&gyroX, &gyroY, &gyroZ);
+}
+
+void readGPSLocation(float &latitude, float &longitude) {
+  while (gpsSerial.available() > 0) {
+    if (gps.encode(gpsSerial.read())) {
+      latitude = gps.location.lat();
+      longitude = gps.location.lng();
+    }
+  }
 }
 
 // Additional functions for handling mesh networking
