@@ -31,6 +31,7 @@ void setup() {
   // Setup Mesh
   mesh.init();
   mesh.setDebugMsgTypes(ERROR | STARTUP | CONNECTION);
+  mesh.onReceive(&handleMeshData);
 }
 
 void loop() {
@@ -65,6 +66,7 @@ void receiveLoRaData() {
       Serial.write(buf, len);
       Serial.println();
       // Process the received LoRa data
+      relayDataOverMesh(String(buf));
     }
   }
 }
@@ -79,13 +81,45 @@ void sendLoRaData() {
 
 void receiveWiFiData() {
   // Implement Wi-Fi data reception logic
-  // Example: String data = WiFi.readString();
-  // Process the received Wi-Fi data
+  if (Serial.available()) {
+    String data = Serial.readString();
+    Serial.print("Received Wi-Fi data: ");
+    Serial.println(data);
+    // Process the received Wi-Fi data
+    relayDataOverMesh(data);
+  }
 }
 
 void sendWiFiData() {
-  // Send Wi-Fi data
-  // Example: String data = "Hello from Wi-Fi Node " + String(NODE_ID);
-  //         WiFi.print(data);
-  Serial.println("Sent Wi-Fi data");
+  // Send Wi-Fi data to other nodes in the mesh network
+  String data = "Hello from Wi-Fi Node " + String(NODE_ID);
+  Mesh::NodeList nodes = mesh.getNodeList();
+
+  for (auto &node : nodes) {
+    if (node.id != mesh.getNodeId() && node.connected) {
+      mesh.sendData(node.id, data);
+    }
+  }
+
+  Serial.println("Sent Wi-Fi data over the mesh: " + data);
+}
+
+void relayDataOverMesh(String data) {
+  // Relay data over the mesh network
+  Mesh::NodeList nodes = mesh.getNodeList();
+  for (auto &node : nodes) {
+    if (node.id != mesh.getNodeId()) {
+      if (node.connected) {
+        mesh.sendData(node.id, data);
+      }
+    }
+  }
+}
+
+void handleMeshData(uint32_t from, String &msg) {
+  Serial.print("Received Mesh data from Node ");
+  Serial.print(from);
+  Serial.print(": ");
+  Serial.println(msg);
+  // Process the received mesh data
 }
