@@ -14,6 +14,62 @@
 
 ![image](https://github.com/mikey506/LoRaNET_NB/assets/13043850/9e5583f3-2247-4f1d-9dde-84d4bcb91720)
 
+## Potential Agriculture Projects
+
+| Project Name                          | Description                               |
+|----------------------------------------|-------------------------------------------|
+| Automated Irrigation System           | Efficiently manages water for crops.      |
+| Smart Greenhouse                      | Creates an ideal environment for crops.   |
+| Livestock Health Monitoring           | Monitors health parameters in livestock. |
+| Crop Monitoring Drone                 | Aerial monitoring for crop health.       |
+| Automated Poultry Farming             | Automation for efficient poultry farming.|
+| Aquaponics System                     | Combines aquaculture and hydroponics.    |
+| Smart Beehive                         | Monitors beehive conditions.             |
+| Precision Agriculture                 | Uses technology for precise farming.     |
+| Crop Sorting System                    | Automates sorting of harvested crops.    |
+| Automated Seed Dispenser              | Dispenses seeds with precision.          |
+| Weed Detection Robot                   | Identifies and removes weeds.            |
+| Livestock Feeding System               | Automated system for livestock feeding. |
+| Smart Fertilizer Dispenser            | Precise dispensing of fertilizers.       |
+| Weather Forecasting Station           | Predicts weather conditions.             |
+| Livestock Location Tracking            | Tracks the location of livestock.       |
+| Automated Fruit Picking Robot         | Harvests fruits using automation.       |
+| Water Quality Monitoring              | Monitors and maintains water quality.   |
+| Solar-Powered Farm                    | Utilizes solar energy for farming.       |
+| Automated Tractor Guidance System     | Guides tractors for efficient farming.  |
+| Smart Compost Bin                     | Monitors and manages composting.        |
+| Livestock Behavior Analysis            | Analyzes and monitors animal behavior.  |
+| Automated Harvesting Machine           | Automates the harvesting process.       |
+| Remote Animal Health Consultation     | Provides remote health consultation.    |
+| Water Conservation System              | Efficiently conserves water resources.  |
+| Aquaculture Monitoring                | Monitors conditions in aquaculture.    |
+| Smart Silo Management                 | Efficiently manages grain storage.      |
+| Automated Dairy Farming               | Automation for dairy farm operations.   |
+| Insect Pest Control System             | Controls pests in the agricultural field.|
+| Crop Disease Detection                | Detects diseases in crops early on.     |
+| Livestock Waste Management            | Efficiently manages livestock waste.   |
+| Smart Animal Identification           | Identifies and tracks animals smartly.  |
+| Automated Chicken Coop Door           | Automates the opening and closing of chicken coop doors. |
+| Precision Livestock Farming           | Applies precision techniques to livestock farming.   |
+| Automated Fish Feeding System         | Automates the feeding process in aquaculture.       |
+| Solar-Powered Water Pump              | Uses solar energy for water pumping.    |
+| Drone Crop Dusting                    | Utilizes drones for crop dusting.       |
+| Smart Hay Baler                        | Automates hay baling process.           |
+| Precision Livestock Feeding           | Precision control over livestock feeding. |
+| Automated Fish Sorting System         | Automates the sorting of fish in aquaculture. |
+| Smart Harvest Storage                 | Smart storage solutions for harvested crops.  |
+| Robotic Pruning System                | Utilizes robots for efficient crop pruning.     |
+| Smart Dairy Productivity              | Enhances productivity in dairy farming. |
+| Automated Hay Feeder                   | Automates the feeding of hay to livestock. |
+| Solar-Powered Pest Repellent          | Uses solar power for pest repellent systems. |
+| Smart Livestock Auction System         | Modernizes livestock auction processes.  |
+| Automated Compost Turner              | Automates the turning of compost.        |
+| Aquatic Plant Monitoring               | Monitors conditions of aquatic plants. |
+| Remote Field Surveillance             | Provides remote surveillance of agricultural fields. |
+| Automated Mushroom Farming            | Automation for efficient mushroom cultivation. |
+| Livestock Facial Recognition           | Utilizes facial recognition for livestock identification. |
+
+
 ## Potential Sensory Based Modules 
 
 | Sensor                               | Sensor                              | Sensor                              |
