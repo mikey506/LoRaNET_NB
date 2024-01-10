@@ -101,48 +101,31 @@ Adjust growing conditions such as light intensity, temperature, and humidity to 
 6. **Low Power Mode:**
    - Enter low-power sleep mode between readings to conserve energy.
 
-# Microgreen Growth Timeline
-
-## Common Microgreens and Harvest Times
-
-| Microgreen      | Growth Time         | Harvest Size                |
-| --------------- | ------------------- | --------------------------- |
-| Radish          | 7-10 days           | 2 inches (5 cm)             |
-| Arugula         | 7-10 days           | 2 inches (5 cm)             |
-| Broccoli        | 7-10 days           | 2 inches (5 cm)             |
-| Mustard         | 7-10 days           | 2 inches (5 cm)             |
-| Kale            | 10-14 days          | 3-4 inches (7.5-10 cm)      |
-| Cilantro        | 10-14 days          | 2 inches (5 cm)             |
-| Basil           | 10-14 days          | 3-4 inches (7.5-10 cm)      |
-| Chard           | 10-14 days          | 3-4 inches (7.5-10 cm)      |
-| Sunflower       | 14-21 days          | 4-6 inches (10-15 cm)       |
-| Beet            | 14-21 days          | 3-4 inches (7.5-10 cm)      |
-| Pea shoots      | 14-21 days          | 3-4 inches (7.5-10 cm)      |
-
 # Common Microgreen Species
 
-| No. | Microgreen           | Scientific Name                |
-| --- | -------------------- | ------------------------------ |
-| 1   | Radish               | Raphanus sativus              |
-| 2   | Arugula              | Eruca sativa                  |
-| 3   | Broccoli             | Brassica oleracea             |
-| 4   | Mustard              | Brassica juncea               |
-| 5   | Kale                 | Brassica oleracea var. acephala|
-| 6   | Cilantro             | Coriandrum sativum            |
-| 7   | Basil                | Ocimum basilicum              |
-| 8   | Chard                | Beta vulgaris var. cicla      |
-| 9   | Sunflower            | Helianthus annuus             |
-| 10  | Beet                 | Beta vulgaris                 |
-| 11  | Pea shoots           | Pisum sativum                 |
-| 12  | Lettuce              | Lactuca sativa                |
-| 13  | Spinach              | Spinacia oleracea             |
-| 14  | Cabbage              | Brassica oleracea var. capitata|
-| 15  | Celery               | Apium graveolens              |
-| 16  | Amaranth             | Amaranthus spp.               |
-| 17  | Coriander            | Coriandrum sativum            |
-| 18  | Dill                 | Anethum graveolens            |
-| 19  | Fennel               | Foeniculum vulgare            |
-| 20  | Parsley              | Petroselinum crispum          |
+| No. | Microgreen           | Scientific Name                | Harvest Timeframe | Recommended Size         |
+| --- | -------------------- | ------------------------------ | ----------------- | ------------------------- |
+| 1   | Radish               | Raphanus sativus              | 7-10 days         | 2 inches (5 cm)           |
+| 2   | Arugula              | Eruca sativa                  | 7-10 days         | 2 inches (5 cm)           |
+| 3   | Broccoli             | Brassica oleracea             | 7-10 days         | 2 inches (5 cm)           |
+| 4   | Mustard              | Brassica juncea               | 7-10 days         | 2 inches (5 cm)           |
+| 5   | Kale                 | Brassica oleracea var. acephala| 10-14 days       | 3-4 inches (7.5-10 cm)    |
+| 6   | Cilantro             | Coriandrum sativum            | 10-14 days       | 2 inches (5 cm)           |
+| 7   | Basil                | Ocimum basilicum              | 10-14 days       | 3-4 inches (7.5-10 cm)    |
+| 8   | Chard                | Beta vulgaris var. cicla      | 10-14 days       | 3-4 inches (7.5-10 cm)    |
+| 9   | Sunflower            | Helianthus annuus             | 14-21 days       | 4-6 inches (10-15 cm)     |
+| 10  | Beet                 | Beta vulgaris                 | 14-21 days       | 3-4 inches (7.5-10 cm)    |
+| 11  | Pea shoots           | Pisum sativum                 | 14-21 days       | 3-4 inches (7.5-10 cm)    |
+| 12  | Lettuce              | Lactuca sativa                | 7-14 days        | 2 inches (5 cm)           |
+| 13  | Spinach              | Spinacia oleracea             | 7-14 days        | 2 inches (5 cm)           |
+| 14  | Cabbage              | Brassica oleracea var. capitata| 7-14 days        | 2 inches (5 cm)           |
+| 15  | Celery               | Apium graveolens              | 14-21 days       | 3-4 inches (7.5-10 cm)    |
+| 16  | Amaranth             | Amaranthus spp.               | 7-14 days        | 2 inches (5 cm)           |
+| 17  | Coriander            | Coriandrum sativum            | 7-14 days        | 2 inches (5 cm)           |
+| 18  | Dill                 | Anethum graveolens            | 10-14 days       | 3-4 inches (7.5-10 cm)    |
+| 19  | Fennel               | Foeniculum vulgare            | 10-14 days       | 3-4 inches (7.5-10 cm)    |
+| 20  | Parsley              | Petroselinum crispum          | 14-21 days       | 3-4 inches (7.5-10 cm)    |
 
-*Note: This list is not exhaustive, and there are many more varieties and species of microgreens available.*
+*Note: Harvest timeframe and recommended size are approximate and may vary based on environmental conditions and specific microgreen varieties.*
+
 
