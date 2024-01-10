@@ -89,19 +89,17 @@ This project aims to create an efficient and automated microgreen cultivation sy
 5. **Communication:**
    - Transmit data to a remote server for storage and analysis.
    - Web dashboard allows users to monitor system status, receive alerts, and adjust settings.
-  
-*Note: Growth times are approximate and may vary based on environmental conditions and specific microgreen varieties.*
 
-## General Harvesting Guidelines
+6. **Low Power Mode:**
+   - Enter low-power sleep mode between readings to conserve energy.
+  
+# General Harvesting Guidelines
 
 Microgreens are typically ready for harvest when they have developed their first true leaves. Harvest when the stems and leaves are tender. Harvesting size can vary based on personal preference and the specific microgreen variety.
 
 Adjust growing conditions such as light intensity, temperature, and humidity to optimize the growth rate of microgreens.
 
-6. **Low Power Mode:**
-   - Enter low-power sleep mode between readings to conserve energy.
-
-# Common Microgreen Species
+## Common Microgreen Species
 
 | No. | Microgreen           | Scientific Name                | Harvest Timeframe | Recommended Size         |
 | --- | -------------------- | ------------------------------ | ----------------- | ------------------------- |
