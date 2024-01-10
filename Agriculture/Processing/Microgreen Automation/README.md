@@ -11,7 +11,7 @@ This project aims to create an efficient and automated microgreen cultivation sy
 | ESP32S3 + SX1262 Development Board  | Processing, control, and long-range communication capabilities.           |
 | Water Level Sensor                  | Monitors water levels in the reservoir for continuous water supply.       |
 | Soilless Medium (e.g., hydroponics) | Provides a medium for seed germination and microgreen growth.              |
-| Water Pump Relay                    | Activates water pump based on water level readings.                        |
+| Water Pump Relay                    | Activates water pumps and misters for container irrigation.               |
 | LED Grow Lights                     | Illuminates the microgreens for optimal growth (adjustable intensity).    |
 | Seed Hopper with Automated Dispenser | Dispenses seeds onto the soilless medium for germination.                  |
 | Temperature and Humidity Sensor      | Controls the internal environment for microgreen cultivation.             |
@@ -84,17 +84,12 @@ This project aims to create an efficient and automated microgreen cultivation sy
    - Water level, temperature, and humidity readings are periodically collected.
 
 4. **Germination Stage:**
-   - Control LED grow lights and watering cycles for the germination stage.
+   - Control LED grow lights and misters for the germination stage.
 
-5. **Mature Microgreens Filtering:**
-   - Netted strainer activates to filter and collect mature microgreens when ready for harvesting.
-
-6. **Harvesting Stage:**
-   - Dump harvested microgreens into the collection area.
-
-7. **Communication:**
+5. **Communication:**
    - Transmit data to a remote server for storage and analysis.
    - Web dashboard allows users to monitor system status, receive alerts, and adjust settings.
 
-8. **Low Power Mode:**
+6. **Low Power Mode:**
    - Enter low-power sleep mode between readings to conserve energy.
+
