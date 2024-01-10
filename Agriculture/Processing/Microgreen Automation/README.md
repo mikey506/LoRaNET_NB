@@ -123,7 +123,27 @@ Adjust growing conditions such as light intensity, temperature, and humidity to 
 | 18  | Dill                 | Anethum graveolens            | 10-14 days       | 3-4 inches (7.5-10 cm)    |
 | 19  | Fennel               | Foeniculum vulgare            | 10-14 days       | 3-4 inches (7.5-10 cm)    |
 | 20  | Parsley              | Petroselinum crispum          | 14-21 days       | 3-4 inches (7.5-10 cm)    |
+| 21  | Mizuna               | Brassica rapa nipposinica      | 7-12 days         | 2 inches (5 cm)           |
+| 22  | Swiss Chard          | Beta vulgaris var. vulgaris    | 10-14 days        | 3-4 inches (7.5-10 cm)    |
+| 23  | Turnip               | Brassica rapa                  | 7-12 days         | 2 inches (5 cm)           |
+| 24  | Red Cabbage          | Brassica oleracea var. capitata| 7-14 days        | 2 inches (5 cm)           |
+| 25  | Kohlrabi             | Brassica oleracea var. gongylodes| 7-12 days       | 2 inches (5 cm)           |
+| 26  | Watercress           | Nasturtium officinale          | 7-12 days        | 2 inches (5 cm)           |
+| 27  | Shiso                | Perilla frutescens var. crispa | 7-12 days        | 2 inches (5 cm)           |
+| 28  | Tatsoi               | Brassica rapa subsp. narinosa  | 7-12 days        | 2 inches (5 cm)           |
+| 29  | Sorrel               | Rumex acetosa                  | 10-14 days       | 3-4 inches (7.5-10 cm)    |
+| 30  | Carrot Tops          | Daucus carota                  | 10-14 days       | 2 inches (5 cm)           |
+| 31  | Garlic Chives        | Allium tuberosum               | 10-14 days       | 2 inches (5 cm)           |
+| 32  | Leek                 | Allium ampeloprasum porrum     | 12-16 days       | 3-4 inches (7.5-10 cm)    |
+| 33  | Red Amaranth         | Amaranthus tricolor            | 7-14 days        | 2 inches (5 cm)           |
+| 34  | Lemon Balm           | Melissa officinalis            | 10-14 days       | 3-4 inches (7.5-10 cm)    |
+| 35  | Chives               | Allium schoenoprasum           | 10-14 days       | 2 inches (5 cm)           |
+| 36  | Beetroot             | Beta vulgaris subsp. vulgaris  | 10-14 days       | 3-4 inches (7.5-10 cm)    |
+| 37  | Anise                | Pimpinella anisum              | 12-16 days       | 3-4 inches (7.5-10 cm)    |
+| 38  | Dandelion            | Taraxacum officinale          | 10-14 days       | 2 inches (5 cm)           |
+| 39  | Endive               | Cichorium endivia              | 10-14 days       | 3-4 inches (7.5-10 cm)    |
+| 40  | Chicory              | Cichorium intybus             | 10-14 days       | 3-4 inches (7.5-10 cm)    |
 
-*Note: Harvest timeframe and recommended size are approximate and may vary based on environmental conditions and specific microgreen varieties.*
+
 
 
