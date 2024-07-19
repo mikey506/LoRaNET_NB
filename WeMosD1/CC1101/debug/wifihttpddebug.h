@@ -1,10 +1,11 @@
-// VCC: Connect to 3.3V
-// GND: Connect to Ground
-// CS: Connect to a digital I/O pin (e.g., pin 10)
-// MOSI: Connect to the MOSI pin on the microcontroller (usually pin D7 or similar)
-// MISO: Connect to the MISO pin on the microcontroller (usually pin D6 or similar)
-// SCK: Connect to the SCK pin on the microcontroller (usually pin D5 or similar)
-// GDO0/GDO2: Connect to digital I/O pins if you need to use them for specific features (like interrupts or status reporting)
+// VDD - 3V3
+// GND - GND
+// CSn (Chip Select) - D5 (GPIO5)
+// SI (MOSI)	- D23 (GPIO23)
+// SO (MISO)	- D19 (GPIO19)
+// SCLK (Clock)	- D18 (GPIO18)
+// GDO0	- D2 (GPIO2)
+// GDO2	- D4 (GPIO4)
 
 #include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
@@ -15,15 +16,19 @@
 #define CC1101_GDO0_PIN 2
 #define CC1101_GDO2_PIN 3
 
-// Wi-Fi credentials
-const char* ssid = "Your_SSID";
-const char* password = "Your_PASSWORD";
+const char* ssid = "WIFI_SSID";
+const char* password = "PASSWORD";
 
 // Create a new CC1101 instance
 CC1101 radio = new Module(CC1101_CS_PIN, CC1101_GDO0_PIN, RADIOLIB_NC, CC1101_GDO2_PIN);
 
 // Create an instance of the ESP8266WebServer class
 ESP8266WebServer server(80);
+
+// Variables to store configuration settings
+float frequency = 915.0;
+int8_t power = 10;
+float bitRate = 4.8;
 
 // Function to handle HTTP requests for the root URL "/"
 void handleRoot() {
@@ -40,7 +45,7 @@ void handleRoot() {
   }
 
   // Set frequency to 433 MHz
-  state = radio.setFrequency(433.0);
+  state = radio.setFrequency(frequency);
   message += "<p>Set Frequency: ";
   if (state == RADIOLIB_ERR_NONE) {
     message += "Success!</p>";
@@ -51,7 +56,7 @@ void handleRoot() {
   }
 
   // Set output power to 10 dBm
-  state = radio.setOutputPower(10);
+  state = radio.setOutputPower(power);
   message += "<p>Set Output Power: ";
   if (state == RADIOLIB_ERR_NONE) {
     message += "Success!</p>";
@@ -62,7 +67,7 @@ void handleRoot() {
   }
 
   // Set data rate to 4.8 kbps
-  state = radio.setBitRate(4.8);
+  state = radio.setBitRate(bitRate);
   message += "<p>Set Bit Rate: ";
   if (state == RADIOLIB_ERR_NONE) {
     message += "Success!</p>";
@@ -82,6 +87,18 @@ void handleRoot() {
     message += state;
     message += "</p>";
   }
+
+  // Display CC1101 configuration
+  message += "<h2>CC1101 Configuration</h2>";
+  message += "<p>Frequency: ";
+  message += frequency;
+  message += " MHz</p>";
+  message += "<p>Output Power: ";
+  message += power;
+  message += " dBm</p>";
+  message += "<p>Bit Rate: ";
+  message += bitRate;
+  message += " kbps</p>";
 
   // Check for incoming data
   if (radio.available()) {
@@ -109,12 +126,6 @@ void handleRoot() {
     message += snr;
     message += " dB</p>";
   }
-
-  // Display CC1101 configuration
-  message += "<h2>CC1101 Configuration</h2>";
-  message += "<p>Frequency: 433.0 MHz</p>";
-  message += "<p>Output Power: 10 dBm</p>";
-  message += "<p>Bit Rate: 4.8 kbps</p>";
 
   message += "</body></html>";
   server.send(200, "text/html", message);
