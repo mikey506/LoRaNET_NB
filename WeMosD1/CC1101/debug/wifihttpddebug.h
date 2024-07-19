@@ -96,7 +96,25 @@ void handleRoot() {
       message += " ";
     }
     message += "</p>";
+
+    // Get RSSI (signal strength)
+    float rssi = radio.getRSSI();
+    message += "<p>RSSI: ";
+    message += rssi;
+    message += " dBm</p>";
+
+    // Get SNR (signal-to-noise ratio)
+    float snr = radio.getSNR();
+    message += "<p>SNR: ";
+    message += snr;
+    message += " dB</p>";
   }
+
+  // Display CC1101 configuration
+  message += "<h2>CC1101 Configuration</h2>";
+  message += "<p>Frequency: 433.0 MHz</p>";
+  message += "<p>Output Power: 10 dBm</p>";
+  message += "<p>Bit Rate: 4.8 kbps</p>";
 
   message += "</body></html>";
   server.send(200, "text/html", message);
