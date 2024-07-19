@@ -1,4 +1,4 @@
-![image]([https://github.com/user-attachments/assets/9239d400-7216-442b-91f9-342b62b94f1e](https://i.imgur.com/Wqhrmau.png))
+![image](https://i.imgur.com/Wqhrmau.png)
 
 ### Power Consumption
 
