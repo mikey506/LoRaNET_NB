@@ -1,6 +1,7 @@
 # Decentralized LoRa Chat Application
 
-![Project Logo](https://via.placeholder.com/150)
+![image](https://i.imgur.com/c8wb9Th.png)
+)
 
 ## Table of Contents
 
@@ -20,8 +21,6 @@
 - [Acknowledgments](#acknowledgments)
 
 ## Introduction
-
-![Interconnected Nodes](https://via.placeholder.com/800x200)
 
 In a world where connectivity knows no bounds, imagine a communication network that defies distance, power constraints, and centralized limitations. Welcome to the future of decentralized communication—welcome to our revolutionary **LoRa Chat Application**.
 
